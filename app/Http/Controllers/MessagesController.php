@@ -15,10 +15,7 @@ class MessagesController extends Controller
             'name' => 'required|Regex:/^[\D]+$/i|between:2,50',
             'email' => 'required|email|max:255|unique:users',
             'message' => 'required',
-            'image' => 'sometimes|required|mimes:jpeg,bmp,png|max:5000'
-            //'password' => 'secret|required|min:6|confirmed',
-            //'email' => 'sometimes|nullable|email',
-
+            'image' => 'sometimes|mimes:jpg,jpeg,bmp,png|max:5000'
         ]);
 
         //create new message

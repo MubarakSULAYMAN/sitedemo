@@ -2,9 +2,14 @@
 
 @section('content')
     <div class="container mt-4">
-        Important fields marked *
+    
         <div class="row">
-            <div class="col-sm-12">
+
+            <div class="col-sm-2">
+            </div>
+
+            <div class="col-sm-6">
+                Important fields marked *
  
                 {!! Form::open(['url' => 'contact/submit']) !!}
 
@@ -33,9 +38,12 @@
 
                 {!! Form::close() !!}
 
+                *** We strongly believe you have carefully read and understood our terms and condition.
             </div>
-
-            We strongly believe you have carefully read and understood our tearms and condition.
+            
+            <div class="col-sm-4">
+                
+            </div>
         </div>
     </div>
 @endsection

@@ -15,22 +15,23 @@
 //     return view('welcome');
 // });
 
-Route::get('', function () {
-    return view('home');
-});
-
-Route::get('/signin', function () {
-    return view('signin');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/customize', function () {
-    return view('customize');
-});
+Route::get('/', 'PagesController@getHome');
+Route::get('/login', 'PagesController@getLogin');
+Route::get('/contact', 'PagesController@getContact');
+Route::get('/signup', 'PagesController@getSignup');
+// Route::get('/', 'PagesController@getHome');
+// Route::get('/', 'PagesController@getHome');
 
 Route::get('/messages', 'MessagesController@getMessages');
-
 Route::post('/contact/submit', 'MessagesController@submit');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Login and register
+Route::get('/login', 'SessionsController@create');
+Route::get('/register', 'RegisterController@create');
+
+// Login with email or username
+Auth::routes();
+Route::get('activate/{token}', 'Auth\RegisterController@activate')->name('activate');
+
