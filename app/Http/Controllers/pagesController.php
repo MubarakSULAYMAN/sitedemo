@@ -12,9 +12,24 @@ class PagesController extends Controller
         return view('home');
     }
 
+    public function getExplore()
+    {
+        return view('explore');
+    }
+
     public function getLogin()
     {
         return view('login');
+    }
+    
+    public function getCustomize()
+    {
+        return view('customize');
+    }
+
+    public function getCart()
+    {
+        return view('cart');
     }
 
     public function getContact()
@@ -24,11 +39,22 @@ class PagesController extends Controller
     
     public function getSignup()
     {
-        return view('signup');
+        return view('register');
     }
 
-    // public function getHome()
-    // {
-    //     return view('home');
-    // }
+    public function getBeStudent()
+    {
+        return view('be_student');
+    }
+
+    public function getArrivals()
+    {
+        return view('arrivals');
+    }
+
+    public function getMessages()
+
+    {
+        return view('messages');
+    }
 }

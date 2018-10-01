@@ -1,5 +1,5 @@
-<div class="container mt-2">
-    <div class="row justify-content-center">
+<!-- <div class="container mt-2">
+    <div class="row justify-content-center"> -->
         <div class="col">
             <script type="text/javascript">
                 setInterval(
@@ -18,8 +18,9 @@
                         currentHours = ( currentHours < 10 ? "0" : "" ) + currentHours;   
                         currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;   
                         currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;    
-                        currentMilliseconds = ( currentMilliseconds < 10 ? "0" : "" ) + currentMilliseconds;    
-                        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + currentMilliseconds;
+                        // currentMilliseconds = ( currentMilliseconds < 10 ? "0" : "" ) + currentMilliseconds;    
+                        // var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + ":" + currentMilliseconds;
+                        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds;
                         document.getElementById("timer").innerHTML = currentTimeString;
                     }
                 , 1);
@@ -46,7 +47,7 @@
                 }
                 document.write(greeting);
             </script>
-            <strong> It is : </strong> <span id="timer"> </span> <strong> of </strong> <span id="date"> </span> <strong> in your local time. </strong> 
+            <strong> It is : </strong> <span id="timer"> </span> <strong> of </strong> <span id="date"> </span> <strong> of your local time. </strong> 
         </div>
-    </div>
-</div>
+    <!-- </div>
+</div> -->

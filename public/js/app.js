@@ -23777,7 +23777,7 @@ if (token) {
      * _.shuffle([1, 2, 3, 4]);
      * // => [4, 1, 3, 2]
      */
-    function CryptGenRandom(collection) {
+    function shuffle(collection) {
       var func = isArray(collection) ? arrayShuffle : baseShuffle;
       return func(collection);
     }
@@ -41045,7 +41045,7 @@ var isBooleanAttr = makeMap(
   'truespeed,typemustmatch,visible'
 );
 
-var xlinkNS = 'https://www.w3.org/1999/xlink';
+var xlinkNS = 'http://www.w3.org/1999/xlink';
 
 var isXlink = function (name) {
   return name.charAt(5) === ':' && name.slice(0, 5) === 'xlink'
@@ -41143,8 +41143,8 @@ function stringifyObject (value) {
 /*  */
 
 var namespaceMap = {
-  svg: 'https://www.w3.org/2000/svg',
-  math: 'https://www.w3.org/1998/Math/MathML'
+  svg: 'http://www.w3.org/2000/svg',
+  math: 'http://www.w3.org/1998/Math/MathML'
 };
 
 var isHTMLTag = makeMap(

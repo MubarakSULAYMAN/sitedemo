@@ -12,23 +12,26 @@ class MessagesController extends Controller
         // return $request->input('name');
         $this->validate($request,
         [
-            'name' => 'required|Regex:/^[\D]+$/i|between:2,50',
-            'email' => 'required|email|max:255|unique:users',
-            'message' => 'required',
-            'image' => 'sometimes|mimes:jpg,jpeg,bmp,png|max:5000'
+            'fullname' => 'required|Regex:/^[\D]+$/i|between:2,51',
+            'email' => 'required|email|max:75|unique:users',
+            'message' => 'required|max:327',
+            // 'image' => 'nullable|max:5000'
+            // 'image' => 'image|mimes:jpg,jpeg,bmp,png|max:5000'
+            // 'image' => 'sometimes|mimes:jpg,jpeg,bmp,png|max:5000'
         ]);
 
         //create new message
         $message = new Message;
-        $message->name = $request->input('name');
+        $message->fullname = $request->input('fullname');
         $message->email = $request->input('email');
         $message->message = $request->input('message');
+        // $message->image = $request->input('image');
 
         //save message
         $message->save();
 
         //Redirect
-        return redirect('/')->with('success', 'We have received your message and should get back to you in some moments.');
+        return redirect('/')->with('success', 'We have received your message and should get back to you in some moments via your email .');
 
     }
 

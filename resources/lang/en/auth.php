@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'Email or password do not match. Have you activated your account?',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

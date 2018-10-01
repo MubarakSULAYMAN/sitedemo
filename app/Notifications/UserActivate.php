@@ -43,8 +43,8 @@ class UserActivate extends Notification
         return (new MailMessage)
             ->from(env('ADMIN_MAIL_ADDRESS'))
             ->subject('Activate Account!')
-            ->greeting(sprintf('Hi, %s', $this->user->name))
-            ->line('We noticed you  justcreated a new account with us. You will need to activate your account to sign in.')
+            ->greeting(sprintf('Hi, %s', $this->user-> $this->firstname . ' ' . $this->surname . ' ' . '(' . $this->username  . ')'))
+            ->line('We noticed you  just created a new account with us. You will need to activate your account to sign in.')
             ->action('Activate', route('activate', [$this->user->token]))
             ->line('Thank you and welcome to our platform!');
                     // ->line('The introduction to the notification.')

@@ -15,14 +15,17 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('fullname');
             $table->string('email');
             $table->mediumText('message');
+            // $table->blob('image');
+            // $table->longblob('image');
+            // $table->binary('image');
             $table->timestamps();
         });
     }
 
-    /**
+    /** 
      * Reverse the migrations.
      *
      * @return void
@@ -32,3 +35,4 @@ class CreateMessagesTable extends Migration
         Schema::dropIfExists('messages');
     }
 }
+    

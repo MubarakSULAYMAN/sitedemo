@@ -9,7 +9,9 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "laravelcollective/html": "^5.4.0"
+        "laravelcollective/html": "^5.4.0",
+        "vlucas/phpdotenv": "^2.5",
+        "aimeos/aimeos-laravel": "~2018.07"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -48,6 +50,10 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-update-cmd": [
+            "php artisan vendor:publish --tag=public --force",
+            "php artisan migrate"
         ]
     },
     "config": {
